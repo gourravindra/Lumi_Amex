@@ -74,7 +74,7 @@ services:
     <<: *airflow-common
     container_name: lumi-airflow-webserver
     restart: unless-stopped
-    command: webserver
+    command: bash -c "rm -f /opt/airflow/airflow-webserver.pid && exec airflow webserver"
     ports:
       - "8082:8080"
     depends_on:

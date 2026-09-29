@@ -11,10 +11,10 @@ from unittest import mock
 
 sys.path.insert(0, "/opt/airflow/dags")
 
-from airflow.exceptions import AirflowException  # noqa: E402
-from airflow.models import DagBag  # noqa: E402
+from airflow.exceptions import AirflowException  
+from airflow.models import DagBag 
 
-from lumi_ingestion import tasks  # noqa: E402
+from lumi_ingestion import tasks  
 
 DAG_ID = "lumi_ingestion_orchestrator"
 
